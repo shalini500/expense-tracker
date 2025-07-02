@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.moods {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mood-btn {
+  font-size: 24px;
+  background: none;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.mood-btn.active {
+  border-color: #28a745;
+  background: #e6f4ea;
+}
+
+.habit-section {
+  margin-bottom: 20px;
+}
+
+.habit-list {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.habit-list li {
+  background: #eef;
+  padding: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+}
+
+.habit-list input[type="checkbox"] {
+  cursor: pointer;
+}
+
+#newHabitInput {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#addHabitBtn {
+  width: 100%;
+  padding: 8px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#addHabitBtn:hover {
+  background: #218838;
+}
+
+.summary {
+  text-align: center;
+  font-size: 16px;
+}

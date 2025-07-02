@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Mood & Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🗓️ Mood & Habit Tracker</h1>
+
+    <section class="mood-section">
+      <h2>Select your mood today:</h2>
+      <div class="moods">
+        <button class="mood-btn" data-mood="😊">😊</button>
+        <button class="mood-btn" data-mood="😐">😐</button>
+        <button class="mood-btn" data-mood="😢">😢</button>
+      </div>
+    </section>
+
+    <section class="habit-section">
+      <h2>Today's habits:</h2>
+      <ul id="habitList" class="habit-list"></ul>
+      <input type="text" id="newHabitInput" placeholder="Add new habit">
+      <button id="addHabitBtn">Add Habit</button>
+    </section>
+
+    <section class="summary">
+      <h2>Today's summary</h2>
+      <p>Mood: <span id="todayMood">-</span></p>
+      <p>Completed habits: <span id="completedCount">0</span></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

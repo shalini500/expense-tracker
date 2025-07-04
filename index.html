@@ -1,38 +1,34 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Mood & Habit Tracker</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1>🗓️ Mood & Habit Tracker</h1>
-
-    <section class="mood-section">
-      <h2>Select your mood today:</h2>
-      <div class="moods">
-        <button class="mood-btn" data-mood="😊">😊</button>
-        <button class="mood-btn" data-mood="😐">😐</button>
-        <button class="mood-btn" data-mood="😢">😢</button>
-      </div>
-    </section>
-
-    <section class="habit-section">
-      <h2>Today's habits:</h2>
-      <ul id="habitList" class="habit-list"></ul>
-      <input type="text" id="newHabitInput" placeholder="Add new habit">
-      <button id="addHabitBtn">Add Habit</button>
-    </section>
-
-    <section class="summary">
-      <h2>Today's summary</h2>
-      <p>Mood: <span id="todayMood">-</span></p>
-      <p>Completed habits: <span id="completedCount">0</span></p>
-    </section>
+    <h1>💰 Expense Tracker</h1>
+    
+    <form id="expense-form">
+      <input type="number" id="amount" placeholder="Amount (₹)" required>
+      <input type="text" id="category" placeholder="Category" required>
+      <input type="text" id="note" placeholder="Note">
+      <input type="date" id="date" required>
+      <button type="submit">Add Expense</button>
+    </form>
+    
+    <h2>Expenses</h2>
+    <ul id="expense-list"></ul>
+    
+    <h2>Total This Month: ₹<span id="total">0</span></h2>
+    
+    <h2>Summary by Category</h2>
+    <canvas id="summary-chart" width="400" height="400"></canvas>
   </div>
-
+  
   <script src="script.js"></script>
 </body>
 </html>
